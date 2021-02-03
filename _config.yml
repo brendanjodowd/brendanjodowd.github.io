@@ -1,5 +1,6 @@
-title: SASQUATCH
+title: Bits of SAS
 author: Brendan O'Dowd
 #theme: jekyll-theme-slate
-theme: jekyll-theme-minima
+#theme: jekyll-theme-minima
+theme: minima
 logo: /media/me_cat.jpeg
