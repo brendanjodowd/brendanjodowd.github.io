@@ -41,9 +41,9 @@ data EARNINGS;
 run;
 {% endhighlight %}
 
-One potential risk here is related to the order of the variables `year_X` in the original dataset. Let's suppose that for some reason the input dataset looked like this:
+One potential risk here is related to the order of the variables `year_X` in the original dataset. Let's suppose that for some reason the input dataset came in with `year_1` and `year_2` in reverse order, like this:
 
-| Name | **Year_2** | **Year_1** | Year_3 |Year_4|
+| Name | *Year_2* | *Year_1* | Year_3 |Year_4|
 |--- | --- | --- | --- | ---|
 |Tom|28|25|30|32|
 |Mary|45|45|45|45|
