@@ -29,7 +29,7 @@ data EARNINGS;
 run;
 {% endhighlight %}
 
-There's a couple of points which can make this a little simpler and a little more flexible which are good to know. The first is that the length, `{4}` above, is actually optional, you can leave it blank and SAS will figure out the length by how many variables are included. Often you will see the length as `{*}` which does the same thing. Brackets `()` and square braces `[]` can be used instead of the curly braces `{}` for length. 
+There's a couple of points which can make this a little simpler and a little more flexible which are good to know. The first is that the length, `{4}` above, is actually optional, you can leave it blank and SAS will figure out the length by how many variables are included. Often you will see the length as `{*}` which does the same thing. Conventionally the length is shown in curly brackets (like this: `{4}`) and the index is shown in square brackets (like this: `[i]`), but actually square, curly and normal brackets can be used interchangeably. 
 
 The second thing that's good to know is that there are shortcuts for cases where you want to list an array of a series of numbered variables with a common prefix, like `year_1 year_2 year_3 year_4`. The first is to use `year:`, and this will include all variables that begin with the string "`year`". So like this:
 
