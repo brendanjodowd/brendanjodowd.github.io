@@ -46,10 +46,8 @@ One potential risk here is related to the order of the variables `year_X` in the
 | Name | *Year_2* | *Year_1* | Year_3 |Year_4|
 |--- | --- | --- | --- | ---|
 |Tom|28|25|30|32|
-|Mary|45|45|45|45|
-|Joe| | |27|30|
-|Kate|33|31| |35|
-|Ben|55|60|65|70|
+|...|...|...|...|...|
+
 
 Now if you use `array earnings_array year: ;`, SAS will assume that the first entry in the array is `year_2` and the second is `year_1`. This could pose problems if you want to treat these years differently or if you're trying to return the index for a particular year based on the data. 
 
