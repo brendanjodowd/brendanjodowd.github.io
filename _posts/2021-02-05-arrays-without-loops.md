@@ -72,6 +72,6 @@ Church St 105, Swords , Dublin
 run;
 {% endhighlight %}
 
-We can concatenate all the variables into one new variable using `catx()`. There are several concatenate functions, but I like using `catx()` because it allows you to define the delimiter in the first argument (I'm just using a space below). 
+We can concatenate all the variables into one new variable using `catx()`. There are [several concatenate functions](https://sasexamplecode.com/concatenate-strings-with-cat-catt-cats-catx/), but I like using `catx()` because it allows you to define the delimiter in the first argument (I'm just using a space below). 
 
 I'm also going to make an indicator for a found string ("Mayo" in this case) which uses the `find()` function wrapped around the same `catx()
