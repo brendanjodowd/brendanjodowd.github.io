@@ -4,7 +4,7 @@ title: "Arrays without loops"
 author: Brendan O'Dowd
 ---
 
-This post highlights some neat uses of arrays which don't involve loops. 
+This post highlights some handy functions which can be applied to arrays without using loops. These are much neater than trying to produce the same outputs using loops. 
 
 Let's imagine we're dealing with the same EARNINGS dataset as the previous post:
 
@@ -27,3 +27,49 @@ data EARNINGS;
   first_income = coalesce(of income_array[*]);
 run;
 {% endhighlight %}
+
+Arrays can be handy for proofing data. Let's use another dataset, called AGES, which contains the ages of people according to several different data sources. We would like to check for inconsistencies across the array. Bob is the only one with an inconsistency, while Joe does not have data from source_2.
+
+{% highlight sas %}
+data AGES;
+  input name $ age_source_1 age_source_2 age_source_3;
+  datalines;
+tom 21 21 21
+may 31 31 31
+bob 24 33 24
+amy 30 30 30 
+joe 25 . 25
+;
+run;
+{% endhighlight %}
+
+I'm going to create two flags called age_error_1 and age_error_2 which indicate if someone has more than one distinct age. The first is based on `range()`, which returns the difference between the highest and lowest entries in the array. The second provide the same output but uses the `min()` and `max()` functions. Note that missing entries are ignored in both cases. 
+
+The last indicator here, called `missing_age`, is based on the function `nmiss()`. This function returns the number of missing entries in an array, and can be used only for arrays of numerical variables. There is an equivalent function called `cmiss()` for arrays of character variables. We'll see that in a later example.
+
+{% highlight sas %}
+data AGES;
+  set AGES;
+  array age_array age_source: ;
+  age_error_1 = range(of age_array[*]) > 0;
+  age_error_2 = min(of age_array[*]) ~= max(of age_array[*]);
+  missing_age = nmiss(of age_array[*]);
+run;
+{% endhighlight %}
+
+Now let's look at some arrays of character variables, and we'll deal with addresses. Very often addresses come in in a series of columns, and there is often no guarantee that equivalent address levels (e.g. county) will appear in the same column for different records. 
+
+{% highlight sas %}
+data ADDRESSES;
+  length address_1 address_2 address_3 $ 30;
+  infile datalines dsd;
+  input address_1 address_2 address_3 $;
+  datalines;
+The White House , Mayo, ,
+15 Oak Road , Killarney , Kerry
+Church St 105, Swords , Dublin
+;
+run;
+{% endhighlight %}
+
+We can concatenate all the variables into one new variable using `catx()`. There are several concatenate functions, but I like using `catx()` because it allows you to define the delimiter in the first argument (I'm just using a space below). 
