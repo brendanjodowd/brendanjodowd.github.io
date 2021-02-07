@@ -43,7 +43,7 @@ joe 25 . 25
 run;
 {% endhighlight %}
 
-I'm going to create two flags called age_error_1 and age_error_2 which indicate if someone has more than one distinct age. The first is based on `range()`, which returns the difference between the highest and lowest entries in the array. The second provide the same output but uses the `min()` and `max()` functions. Note that missing entries are ignored in both cases. 
+I'm going to create two flags called age_error_1 and age_error_2 which indicate if someone has more than one distinct age. The first is based on `range()`, which returns the difference between the highest and lowest entries in the array. The second provides the same output but uses the `min()` and `max()` functions. Note that missing entries are ignored in both cases. 
 
 The last indicator here, called `missing_age`, is based on the function `nmiss()`. This function returns the number of missing entries in an array, and can be used only for arrays of numerical variables. There is an equivalent function called `cmiss()` for arrays of character variables. We'll see that in a later example.
 
@@ -73,3 +73,5 @@ run;
 {% endhighlight %}
 
 We can concatenate all the variables into one new variable using `catx()`. There are several concatenate functions, but I like using `catx()` because it allows you to define the delimiter in the first argument (I'm just using a space below). 
+
+I'm also going to make an indicator for a found string ("Mayo" in this case) which uses the `find()` function wrapped around the same `catx()
