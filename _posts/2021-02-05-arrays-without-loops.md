@@ -74,4 +74,19 @@ run;
 
 We can concatenate all the variables into one new variable using `catx()`. There are [several concatenate functions](https://sasexamplecode.com/concatenate-strings-with-cat-catt-cats-catx/), but I like using `catx()` because it allows you to define the delimiter in the first argument (I'm just using a space below). 
 
-I'm also going to make an indicator for a found string ("Mayo" in this case) which uses the `find()` function wrapped around the same `catx()
+I'm also going to make an indicator for a found string ("Mayo" in this case) which uses the `findw()` function wrapped around the same `catx()` expression. Note that in this way the concatenated expression does not have to be stored as an extra variable. 
+
+Finally I'm using `cmiss()`, which, as explained above, returns the number of missing entries in an array of character variables. This is used to make a simple indicator called `missing_field`. 
+
+{% highlight sas %}
+data ADDRESSES;
+  length full_address $ 100;
+  set ADDRESSES;
+  address address_array address_: ;
+  full_address = catx(" " , of address_array[*]) ;
+  
+  if findw(catx(" " , of address_array[*])  , "Mayo" ) then mayo_ind = 1; else mayo_ind = 0;
+  
+  missing_field = cmiss(of address_array[*]);
+run;
+{% endhighlight %}
