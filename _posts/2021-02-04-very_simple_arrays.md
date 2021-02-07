@@ -9,7 +9,7 @@ Arrays are a convenient tool for handling several columns at once within a data 
 Let's imagine a dataset called EARNINGS showing annual earnings (in thousands) for 5 people over 4 years.
 
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
-|--- | --- | --- | ---| ---|
+|:-- | --: | --: | --:| --:|
 |Tom|25|28|30|32|
 |Mary|45|45|45|45|
 |Joe| | |27|30|
