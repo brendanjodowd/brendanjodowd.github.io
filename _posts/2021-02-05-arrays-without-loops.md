@@ -10,13 +10,29 @@ This post highlights some handy functions which can be applied to arrays without
 
 Let's imagine we're dealing with the same EARNINGS dataset as the previous post:
 
+<details>
+  <summary>Click for datalines on table</summary>
+  
+{% highlight sas %}
+data EARNINGS;
+  input name $ Year_1 Year_2 Year_3 Year_4;
+  datalines;
+Tom 25 28 30 32
+May 45 45 45 45
+Bob . . 27 30
+Amy 31 33 . 35
+Joe 60 55 65 70
+;
+run;
+{% endhighlight %}
+</details>
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
 |--- | --: | --:| --:| --:|
 |Tom|25|28|30|32|
-|Mary|45|45|45|45|
-|Joe| .| .|27|30|
-|Kate|31|33| .|35|
-|Ben|60|55|65|70|
+|May|45|45|45|45|
+|Bob| .| .|27|30|
+|Amy|31|33| .|35|
+|Joe|60|55|65|70|
 
 We'll start with some simple functions like `sum()` and `mean()`. There is also `min()`, `max()`, `median()` and several others which work in the same way. Note the structure which includes `of` and `[*]` to indicate the whole array. The last function `coalesce()` is not so obvious; it returns the first non-missing entry in the array, which is the first column for everyone and 27 for Joe. It can be applied to array of numerical variables, there is a function called `coalescec()` for character arrays. 
 
@@ -34,18 +50,31 @@ run;
 
 Arrays can be handy for proofing data. Let's use another dataset, called AGES, which contains the ages of people according to several different data sources. We would like to check for inconsistencies across the array. Bob is the only one with an inconsistency, while Joe does not have data from source_2.
 
+
+<details>
+  <summary>Click for datalines on table</summary>
+  
 {% highlight sas %}
 data AGES;
   input name $ age_source_1 age_source_2 age_source_3;
   datalines;
-tom 21 21 21
-may 31 31 31
-bob 24 33 24
-amy 30 30 30 
-joe 25 . 25
+Tom 21 21 21
+May 31 31 31
+Bob 24 33 24
+Amy 30 30 30 
+Joe 25 . 25
 ;
 run;
 {% endhighlight %}
+</details>
+| Name | age_source_1 | age_source_2 | age_source_3 |
+|--- | --: | --:| --:| --:|
+|Tom|21|21|21|
+|May|31|31|31|
+|Bob|24|33|24|
+|Amy|30|30|30|
+|Joe|25|.|25|
+
 
 I'm going to create two flags called age_error_1 and age_error_2 which indicate if someone has more than one distinct age. The first is based on `range()`, which returns the difference between the highest and lowest entries in the array. The second provides the same output but uses the `min()` and `max()` functions. Note that missing entries are ignored in both cases. 
 
@@ -65,6 +94,9 @@ run;
 
 Now let's look at some arrays of character variables, and we'll deal with addresses. Very often addresses come in in a series of columns, and there is often no guarantee that equivalent address levels (e.g. county) will appear in the same column for different records. 
 
+<details>
+  <summary>Click for datalines on table</summary>
+  
 {% highlight sas %}
 data ADDRESSES;
   length address_1 address_2 address_3 $ 30;
@@ -74,9 +106,17 @@ data ADDRESSES;
 The White House , Mayo, ,
 15 Oak Road , Killarney , Kerry
 Church St 105, Swords , Dublin
+123 Castle Hill, Swinford, Mayo 
 ;
 run;
 {% endhighlight %}
+</details>
+| address_1 | address_2 | address_3 | 
+|--- | ---| ---|
+|The White House|Mayo| |
+|15 Oak Road|Killarney|Kerry|
+|Church St 105|Swords|Dublin|
+|123 Castle Hill|Swinford|Mayo|
 
 We can concatenate all the variables into one new variable using `catx()`. There are [several concatenate functions](https://sasexamplecode.com/concatenate-strings-with-cat-catt-cats-catx/), but I like using `catx()` because it allows you to define the delimiter in the first argument (I'm just using a space below). 
 
@@ -101,20 +141,31 @@ run;
 
 Here we look at two functions which tell you in which entry, or in which column, a particular value can be found. The first of these is `coalesec()`, which returns the first non-empty entry in an array, and has a counterpart for numberical arrays called `coalesce()`. The second is `whichc()` which returns the first match in an array to a specified search term. We'll use a small dataset called NACE which has a series of columns each indicating with a single letter the [NACE code](https://ec.europa.eu/competition/mergers/cases/index/nace_all.html) that somebody worked in within a particular month. In the dataset below Tom and May change industries once or twice, while Bob and Joe stay in the same sector and Amy joins a sector in month_3.
 
+<details>
+  <summary>Click for datalines on table</summary>
+  
 {% highlight sas %}
 data NACE;
-  length name $ 5 month_1 month_2 month_3 month_4 $ 1;
+  length name $ 3 month_1 month_2 month_3 month_4 $ 1;
   infile datalines dsd;
   input name month_1 month_2 month_3 month_4;
   datalines;
-tom,A,B,A,A
-may,R,R,Q,Q
-bob,O,O,O,O
-amy, , ,B,B
-joe,Q,Q,Q,Q
+Tom,A,B,A,A
+May,R,R,Q,Q
+Bob,O,O,O,O
+Amy, , ,B,B
+Joe,Q,Q,Q,Q
 ;
 run;
 {% endhighlight %}
+</details>
+| Name | month_1 | month_2 | month_3 | month_4 |
+|--- | ---| ---|---|---|
+|Tom|A|B|A|A|
+|May|R|R|Q|Q|
+|Bob|O|O|O|O|
+|Amy| | |B|B|
+|Joe|Q|Q|Q|Q|
 
 As mentioned above, `coalescec()` which returns the first non-missing entry in a character array. We use it below to define a variable called `first_job`. 
 
