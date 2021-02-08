@@ -108,20 +108,11 @@ run;
 {% endhighlight %}
 
 <details>
-  <summary>View output</summary>
+  <summary>Table</summary>
 
-
-
-
-| Name | age_source_1 | age_source_2 | age_source_3 |age_error_1 |age_error_2 |missing_age|
-|--- | --: | --:| --:|--: | --:| --:|
-|Tom|21|21|21|0|0|0|
-|May|31|31|31|0|0|0|
-|Bob|24|33|24|1|1|0|
-|Amy|30|30|30|0|0|0|
-|Joe|25|.|25|0|0|1|
-
-
+| variable | example |
+|---------|----------|
+| abc | 123 |
 
 </details>
 
