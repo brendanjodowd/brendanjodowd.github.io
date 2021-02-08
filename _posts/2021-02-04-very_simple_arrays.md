@@ -8,18 +8,10 @@ Arrays are a convenient tool for handling several columns at once within a data 
 
 Let's imagine a dataset called EARNINGS showing annual earnings (in thousands) for 5 people over 4 years.
 
-| Name | Year_1 | Year_2 | Year_3 |Year_4|
-|:-- | --: | --: | --:| --:|
-|Tom|25|28|30|32|
-|May|45|45|45|45|
-|Bob|.|.|27|30|
-|Amy|31|33| .|35|
-|Joe|60|55|65|70|
-
 <details>
   <summary>Click for datalines on table</summary>
   
-  ```sas
+{% highlight sas %}
     data EARNINGS;
   input name $ Year_1 Year_2 Year_3 Year_4;
   datalines;
@@ -30,8 +22,16 @@ Amy 31 33 . 35
 Joe 60 55 65 70
 ;
 run;
-  ```
+{% endhighlight %}
 </details>
+
+| Name | Year_1 | Year_2 | Year_3 |Year_4|
+|:-- | --: | --: | --:| --:|
+|Tom|25|28|30|32|
+|May|45|45|45|45|
+|Bob|.|.|27|30|
+|Amy|31|33| .|35|
+|Joe|60|55|65|70|
 
 Here's a very basic array setup like what you'll see in an intro to arrays. We'll create an array called `earnings_array` which contains the earnings for each individual in each of the four years. Then we'll create a do loop which adds 5 to everyone's earnings in each year. At the end I've added `drop i;` because otherwise the indexing variable will be in the output, and we usually don't want that. 
 
