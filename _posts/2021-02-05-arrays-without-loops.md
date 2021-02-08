@@ -35,7 +35,7 @@ run;
 |Amy|31|33| .|35|
 |Joe|60|55|65|70|
 
-We'll start with some simple functions like `sum()` and `mean()`. There is also `min()`, `max()`, `median()` and several others which work in the same way. Note the structure which includes `of` and `[*]` to indicate the whole array. The last function `coalesce()` is not so obvious; it returns the first non-missing entry in the array, which is the first column for everyone and 27 for Joe. It can be applied to array of numerical variables, there is a function called `coalescec()` for character arrays. 
+We'll start with some simple functions like `sum()` and `mean()`. There is also `min()`, `max()`, `median()` and several others which work in the same way. Note the structure which includes `of` and `[*]` to indicate the whole array. The last function `coalesce()` is not so obvious; it returns the first non-missing entry in the array, which is the first column for everyone and 27 for Bob. It can be applied to array of numerical variables, there is a function called `coalescec()` for character arrays. 
 
 {% highlight sas %}
 data EARNINGS;
@@ -46,6 +46,19 @@ data EARNINGS;
   first_income = coalesce(of income_array[*]);
 run;
 {% endhighlight %}
+
+<details>
+  <summary>View output</summary>
+
+| Name | Year_1 | Year_2 | Year_3 |Year_4|total_income|mean_income|first_income|
+|--- | --: | --:| --:| --:|--:| --:| --:|
+|Tom|25|28|30|32|115|28.75|25|
+|May|45|45|45|45|180|45|45|
+|Bob| .| .|27|30|57|28.5|27|
+|Amy|31|33| .|35|99|33|31|
+|Joe|60|55|65|70|250|62.5|60|
+
+</details>
 
 ## Using `range()`, `min()`/`max()` and `nmiss()` for proofing
 
@@ -91,6 +104,19 @@ data AGES;
   missing_age = nmiss(of age_array[*]);
 run;
 {% endhighlight %}
+
+<details>
+  <summary>View output</summary>
+  
+| Name | age_source_1 | age_source_2 | age_source_3 |age_error_1 |age_error_2 |missing_age|
+|--- | --: | --:| --:|--: | --:| --:|
+|Tom|21|21|21|0|0|0|
+|May|31|31|31|0|0|0|
+|Bob|24|33|24|1|1|0|
+|Amy|30|30|30|0|0|0|
+|Joe|25|.|25|0|0|1|
+  
+</details>
 
 ## Concatenating character arrays 
 
