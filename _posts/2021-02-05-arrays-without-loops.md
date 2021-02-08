@@ -90,3 +90,31 @@ data ADDRESSES;
   missing_field = cmiss(of address_array[*]);
 run;
 {% endhighlight %}
+
+Finally I want to include something on `whichc()` and `call sortc()`. To do this let's imagine a dataset called NACE which has a series of columns that include a single letter which indicates the [NACE code](https://ec.europa.eu/competition/mergers/cases/index/nace_all.html) that somebody worked in within that month. In the dataset below Tom and May change industries once or twice, while Bob and Joe stay in the same sector and Amy joins a sector in month_3.
+
+{% highlight sas %}
+data NACE;
+  length name $ 5 month_1 month_2 month_3 month_4 $ 1;
+  infile datalines dsd;
+  input name month_1 month_2 month_3 month_4;
+  datalines;
+tom,A,B,A,A
+may,R,R,Q,Q
+bob,O,O,O,O
+amy, , ,B,B
+joe,Q,Q,Q,Q
+run;
+{% endhighlight %}
+
+As I mentioned earlier, `coalescec()` is the character counterpart to `coalesce()` which returns the first non-missing entry in a character array. We use it below to define a variable called `first_job`. 
+
+Next I use `whichc()`, which takes a search terms as its first argument and a character array as its second argument (the equivalent version for numerical arrays is called `whichn()`). This returns the index in the array corresponding to the first match of an array entry to the search term. Here my search terms is "Q", which is the NACE code for Health & Social Work. I use this to define a variable called `health_joiner`, so that I can find the month in which somebody first joined the Health & Social Work sector. Trying to do the same using loops would be much more verbose.
+
+The fact that `whichc()` returns the index when you're already working with arrays is handy, because it makes it easy to examine neighbouring columns by adding a `+1` or `-1` to the index. Suppose, for example, we were interested in the sectors that people worked in before joining Health & Social Work. I can then use `whichc()` looking for "Q" and then stick on a `-1` to get the sector from the month before. Below I use this technique to define a variable called `before_health`.
+
+{% highlight sas %}
+data NACE;
+  set NACE;
+run;
+{% endhighlight %}
