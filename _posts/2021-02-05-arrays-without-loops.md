@@ -27,6 +27,7 @@ run;
 {% endhighlight %}
 </details>
 
+
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
 |--- | --: | --:| --:| --:|
 |Tom|25|28|30|32|
@@ -49,6 +50,7 @@ run;
 
 <details>
   <summary>View output</summary>
+
 
 | Name | Year_1 | Year_2 | Year_3 |Year_4|total_income|mean_income|first_income|
 |--- | --: | --:| --:| --:|--:| --:| --:|
@@ -107,7 +109,8 @@ run;
 
 <details>
   <summary>View output</summary>
-  
+
+
 | Name | age_source_1 | age_source_2 | age_source_3 |age_error_1 |age_error_2 |missing_age|
 |--- | --: | --:| --:|--: | --:| --:|
 |Tom|21|21|21|0|0|0|
