@@ -7,12 +7,11 @@ author: Brendan O'Dowd
 Arrays are a convenient tool for handling several columns at once within a data step. They're often used for performing similar operations to multiple variables in a loop without having to duplicate code. An array can include character or numerical variables, but not both. I usually use arrays to handle a bunch of existing variables, but an array statement can also be used to create a series of new variables too. At the end of the data step all those variables will still exist, but their relationship to the array will not. 
 
 Let's imagine a dataset called EARNINGS showing annual earnings (in thousands) for 5 people over 4 years.
-
 <details>
   <summary>Click for datalines on table</summary>
   
 {% highlight sas %}
-    data EARNINGS;
+data EARNINGS;
   input name $ Year_1 Year_2 Year_3 Year_4;
   datalines;
 Tom 25 28 30 32
@@ -24,7 +23,6 @@ Joe 60 55 65 70
 run;
 {% endhighlight %}
 </details>
-
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
 |:-- | --: | --: | --:| --:|
 |Tom|25|28|30|32|
