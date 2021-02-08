@@ -26,6 +26,7 @@ Joe 60 55 65 70
 run;
 {% endhighlight %}
 </details>
+
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
 |--- | --: | --:| --:| --:|
 |Tom|25|28|30|32|
@@ -67,8 +68,9 @@ Joe 25 . 25
 run;
 {% endhighlight %}
 </details>
+
 | Name | age_source_1 | age_source_2 | age_source_3 |
-|--- | --: | --:| --:| --:|
+|--- | --: | --:| --:|
 |Tom|21|21|21|
 |May|31|31|31|
 |Bob|24|33|24|
@@ -160,7 +162,7 @@ run;
 {% endhighlight %}
 </details>
 | Name | month_1 | month_2 | month_3 | month_4 |
-|--- | ---| ---|---|---|
+|--- | :-:| :-:|:-:|:-:|
 |Tom|A|B|A|A|
 |May|R|R|Q|Q|
 |Bob|O|O|O|O|
