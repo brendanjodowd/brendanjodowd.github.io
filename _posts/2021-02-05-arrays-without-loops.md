@@ -111,6 +111,8 @@ run;
   <summary>View output</summary>
 
 
+
+
 | Name | age_source_1 | age_source_2 | age_source_3 |age_error_1 |age_error_2 |missing_age|
 |--- | --: | --:| --:|--: | --:| --:|
 |Tom|21|21|21|0|0|0|
@@ -118,7 +120,9 @@ run;
 |Bob|24|33|24|1|1|0|
 |Amy|30|30|30|0|0|0|
 |Joe|25|.|25|0|0|1|
-  
+
+
+
 </details>
 
 
