@@ -9,7 +9,7 @@ This post highlights some handy functions which can be applied to arrays without
 Let's imagine we're dealing with the same EARNINGS dataset as the previous post:
 
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
-|--- | --- | --- | --- | ---|
+|--- | --: | --:| --:| --:|
 |Tom|25|28|30|32|
 |Mary|45|45|45|45|
 |Joe| | |27|30|
