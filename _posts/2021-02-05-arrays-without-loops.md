@@ -6,6 +6,8 @@ author: Brendan O'Dowd
 
 This post highlights some handy functions which can be applied to arrays without using loops. These are much neater than trying to produce the same outputs using loops. 
 
+## Simple functions: `sum()`, `mean()` and `coalesce()`
+
 Let's imagine we're dealing with the same EARNINGS dataset as the previous post:
 
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
@@ -27,6 +29,8 @@ data EARNINGS;
   first_income = coalesce(of income_array[*]);
 run;
 {% endhighlight %}
+
+## Using `range()`, `min()`/`max()` and `nmiss()` for proofing
 
 Arrays can be handy for proofing data. Let's use another dataset, called AGES, which contains the ages of people according to several different data sources. We would like to check for inconsistencies across the array. Bob is the only one with an inconsistency, while Joe does not have data from source_2.
 
@@ -56,6 +60,8 @@ data AGES;
   missing_age = nmiss(of age_array[*]);
 run;
 {% endhighlight %}
+
+## Concatenating character arrays 
 
 Now let's look at some arrays of character variables, and we'll deal with addresses. Very often addresses come in in a series of columns, and there is often no guarantee that equivalent address levels (e.g. county) will appear in the same column for different records. 
 
@@ -90,6 +96,8 @@ data ADDRESSES;
   missing_field = cmiss(of address_array[*]);
 run;
 {% endhighlight %}
+
+## Returning a particular index in an array
 
 Finally I want to include something on `whichc()` and `call sortc()`. To do this let's imagine a dataset called NACE which has a series of columns that include a single letter which indicates the [NACE code](https://ec.europa.eu/competition/mergers/cases/index/nace_all.html) that somebody worked in within that month. In the dataset below Tom and May change industries once or twice, while Bob and Joe stay in the same sector and Amy joins a sector in month_3.
 
