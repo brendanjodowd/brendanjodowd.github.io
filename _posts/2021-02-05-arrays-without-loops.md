@@ -52,12 +52,12 @@ run;
   <summary>View output</summary>
 
 <table>
-<thead>
-<tr>stuff</tr>
-</thead>
-<tbody>
-<tr>more stuff</tr>
-</tbody>
+  <thead>
+    <tr><th>stuff</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>more stuff</td></tr>
+  </tbody>
 </table>
 
 | Name | Year_1 | Year_2 | Year_3 |Year_4|total_income|mean_income|first_income|
