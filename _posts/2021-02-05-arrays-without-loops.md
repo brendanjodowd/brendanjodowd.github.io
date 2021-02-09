@@ -10,6 +10,14 @@ This post highlights some handy functions which can be applied to arrays without
 
 Let's imagine we're dealing with the same EARNINGS dataset as the previous post:
 
+| Name | Year_1 | Year_2 | Year_3 |Year_4|
+|--- | --: | --:| --:| --:|
+|Tom|25|28|30|32|
+|May|45|45|45|45|
+|Bob| .| .|27|30|
+|Amy|31|33| .|35|
+|Joe|60|55|65|70|
+
 <details>
   <summary>Click for datalines on table</summary>
   
@@ -26,14 +34,6 @@ Joe 60 55 65 70
 run;
 {% endhighlight %}
 </details>
-
-| Name | Year_1 | Year_2 | Year_3 |Year_4|
-|--- | --: | --:| --:| --:|
-|Tom|25|28|30|32|
-|May|45|45|45|45|
-|Bob| .| .|27|30|
-|Amy|31|33| .|35|
-|Joe|60|55|65|70|
 
 We'll start with some simple functions like `sum()` and `mean()`. There is also `min()`, `max()`, `median()` and several others which work in the same way. Note the structure which includes `of` and `[*]` to indicate the whole array. The last function `coalesce()` is not so obvious; it returns the first non-missing entry in the array, which is the first column for everyone and 27 for Bob. It can be applied to array of numerical variables, there is a function called `coalescec()` for character arrays. 
 
@@ -69,6 +69,13 @@ run;
 
 Arrays can be handy for proofing data. Let's use another dataset, called AGES, which contains the ages of people according to several different data sources. We would like to check for inconsistencies across the array. Bob is the only one with an inconsistency, while Joe does not have data from source_2.
 
+| Name | age_source_1 | age_source_2 | age_source_3 |
+|--- | --: | --:| --:|
+|Tom|21|21|21|
+|May|31|31|31|
+|Bob|24|33|24|
+|Amy|30|30|30|
+|Joe|25|.|25|
 
 <details>
   <summary>Click for datalines on table</summary>
@@ -86,15 +93,6 @@ Joe 25 . 25
 run;
 {% endhighlight %}
 </details>
-
-| Name | age_source_1 | age_source_2 | age_source_3 |
-|--- | --: | --:| --:|
-|Tom|21|21|21|
-|May|31|31|31|
-|Bob|24|33|24|
-|Amy|30|30|30|
-|Joe|25|.|25|
-
 
 I'm going to create two flags called age_error_1 and age_error_2 which indicate if someone has more than one distinct age. The first is based on `range()`, which returns the difference between the highest and lowest entries in the array. The second provides the same output but uses the `min()` and `max()` functions. Note that missing entries are ignored in both cases. 
 
