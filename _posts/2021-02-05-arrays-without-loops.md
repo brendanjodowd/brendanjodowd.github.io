@@ -27,7 +27,6 @@ run;
 {% endhighlight %}
 </details>
 
-
 | Name | Year_1 | Year_2 | Year_3 |Year_4|
 |--- | --: | --:| --:| --:|
 |Tom|25|28|30|32|
@@ -112,8 +111,7 @@ run;
 {% endhighlight %}
 
 <details>
-  <summary>Table</summary>
-
+  <summary>View output</summary>
 <table>
   <thead>
     <tr><th>Name</th><th>age_source_1</th><th>age_source_2</th><th>age_source_3</th><th>age_error_1</th><th>age_error_2</th><th>missing_age</th></tr>
@@ -126,7 +124,6 @@ run;
     <tr><td>Joe</td><td>25</td><td>.</td><td>25</td><td>0</td><td>0</td><td>1</td></tr>
   </tbody>
 </table>
-
 </details>
 
 
@@ -200,8 +197,9 @@ Joe,Q,Q,Q,Q
 run;
 {% endhighlight %}
 </details>
+
 | Name | month_1 | month_2 | month_3 | month_4 |
-|--- | :-:| :-:|:-:|:-:|
+|---| :-:| :-:|:-:|:-:|
 |Tom|A|B|A|A|
 |May|R|R|Q|Q|
 |Bob|O|O|O|O|
