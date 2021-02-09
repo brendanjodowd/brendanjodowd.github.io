@@ -60,7 +60,7 @@ run;
     <tr><td>May</td><td>45</td><td>45</td><td>45</td><td>45</td><td>180</td><td>45</td><td>45</td></tr>
     <tr><td>Bob</td><td>.</td><td>.</td><td>27</td><td>30</td><td>57</td><td>28.5</td><td>27</td></tr>
     <tr><td>Amy</td><td>31</td><td>33</td><td>.</td><td>35</td><td>99</td><td>33</td><td>31</td></tr>
-    <tr><tdJoe</td><td>60</td><td>55</td><td>65</td><td>70</td><td>250</td><td>62.5</td><td>60</td></tr>
+    <tr><td>Joe</td><td>60</td><td>55</td><td>65</td><td>70</td><td>250</td><td>62.5</td><td>60</td></tr>
   </tbody>
 </table>
 
@@ -123,20 +123,12 @@ run;
     <tr><td>May</td><td>31</td><td>31</td><td>31</td><td>0</td><td>0</td><td>0</td></tr>
     <tr><td>Bob</td><td>24</td><td>33</td><td>24</td><td>1</td><td>1</td><td>0</td></tr>
     <tr><td>Amy</td><td>30</td><td>30</td><td>30</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><tdJoe</td><td>25</td><td>.</td><td>25</td><td>0</td><td>0</td><td>1</td></tr>
+    <tr><td>Joe</td><td>25</td><td>.</td><td>25</td><td>0</td><td>0</td><td>1</td></tr>
   </tbody>
 </table>
 
 </details>
 
-
-| Name | age_source_1 | age_source_2 | age_source_3 |age_error_1 |age_error_2 |missing_age|
-|--- | --: | --:| --:|--: | --:| --:|
-|Tom|21|21|21|0|0|0|
-|May|31|31|31|0|0|0|
-|Bob|24|33|24|1|1|0|
-|Amy|30|30|30|0|0|0|
-|Joe|25|.|25|0|0|1|
 
 ## Concatenating character arrays 
 
