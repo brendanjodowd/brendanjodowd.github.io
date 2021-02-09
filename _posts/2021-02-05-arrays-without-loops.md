@@ -53,20 +53,16 @@ run;
 
 <table>
   <thead>
-    <tr><th>stuff</th></tr>
+    <tr><th>Name</th><th>Year_1</th><th>Year_2</th><th>Year_3</th><th>Year_4</th><th>total_income</th><th>mean_income</th><th>first_income</th></tr>
   </thead>
   <tbody>
-    <tr><td>more stuff</td></tr>
+    <tr><td>Tom</td><td>25</td><td>28</td><td>30</td><td>32</td><td>115</td><td>28.72</td><td>25</td></tr>
+    <tr><td>May</td><td>45</td><td>45</td><td>45</td><td>45</td><td>180</td><td>45</td><td>45</td></tr>
+    <tr><td>Bob</td><td>.</td><td>.</td><td>27</td><td>30</td><td>57</td><td>28.5</td><td>27</td></tr>
+    <tr><td>Amy</td><td>31</td><td>33</td><td>.</td><td>35</td><td>99</td><td>33</td><td>31</td></tr>
+    <tr><tdJoe</td><td>60</td><td>55</td><td>65</td><td>70</td><td>250</td><td>62.5</td><td>60</td></tr>
   </tbody>
 </table>
-
-| Name | Year_1 | Year_2 | Year_3 |Year_4|total_income|mean_income|first_income|
-|--- | --: | --:| --:| --:|--:| --:| --:|
-|Tom|25|28|30|32|115|28.75|25|
-|May|45|45|45|45|180|45|45|
-|Bob| .| .|27|30|57|28.5|27|
-|Amy|31|33| .|35|99|33|31|
-|Joe|60|55|65|70|250|62.5|60|
 
 </details>
 
@@ -118,9 +114,18 @@ run;
 <details>
   <summary>Table</summary>
 
-| variable | example |
-|---------|----------|
-| abc | 123 |
+<table>
+  <thead>
+    <tr><th>Name</th><th>age_source_1</th><th>age_source_2</th><th>age_source_3</th><th>age_error_1</th><th>age_error_2</th><th>missing_age</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Tom</td><td>21</td><td>21</td><td>21</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>May</td><td>31</td><td>31</td><td>31</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>Bob</td><td>24</td><td>33</td><td>24</td><td>1</td><td>1</td><td>0</td></tr>
+    <tr><td>Amy</td><td>30</td><td>30</td><td>30</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><tdJoe</td><td>25</td><td>.</td><td>25</td><td>0</td><td>0</td><td>1</td></tr>
+  </tbody>
+</table>
 
 </details>
 
