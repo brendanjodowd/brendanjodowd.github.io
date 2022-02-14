@@ -1,5 +1,3 @@
-# Brendan's Code
-
-Hi. Here is some code which I hope is useful.
-
 ## [Guide to making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
+
+## [Interactive Constituency Map](https://brendanjodowd.github.io/cons_map/)
