@@ -1,3 +1,5 @@
+<title>Some R Code</title>
+
 ## [Guide to making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
 
 ## [Guide to making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
