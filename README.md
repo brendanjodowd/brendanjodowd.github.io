@@ -1,4 +1,4 @@
-<title>Some R Code</title>
+<title></title>
 
 ## [Guide to making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
 
