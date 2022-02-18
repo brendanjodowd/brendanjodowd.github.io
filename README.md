@@ -1,10 +1,10 @@
 <title></title>
 
-## [Guide to making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
+## [Making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
 
-## [Guide to making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
+## [Making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
 
-## [Guide to Statistical Disclosure Control using sdcTable](https://brendanjodowd.github.io/interactive_maps/)
+## [Statistical Disclosure Control using sdcTable](https://brendanjodowd.github.io/sdc_guide/)
 
 ## <a href="https://brendanjodowd.github.io/cons_map" target="_blank">Constituency Tilegram</a>
 
