@@ -1,11 +1,15 @@
 <title></title>
 
-## [Making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
+## Some R guides 
 
-## [Making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
+### [Making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
 
-## [Statistical Disclosure Control using sdcTable](https://brendanjodowd.github.io/sdc_guide/)
+### [Making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
 
-## <a href="https://brendanjodowd.github.io/cons_map" target="_blank">Constituency Tilegram</a>
+### [Statistical Disclosure Control using sdcTable](https://brendanjodowd.github.io/sdc_guide/)
 
-## <a href="https://brendanjodowd.github.io/assets/sas-r.pdf" target="_blank">SAS-R Cheatsheet</a>
+## Other bits
+
+### <a href="https://brendanjodowd.github.io/cons_map" target="_blank">Constituency Tilegram</a>
+
+### <a href="https://brendanjodowd.github.io/assets/sas-r.pdf" target="_blank">SAS-R Cheatsheet</a>
