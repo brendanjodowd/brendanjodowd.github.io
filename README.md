@@ -2,6 +2,8 @@
 
 ## Some R guides 
 
+### [An introduction to R](https://brendanjodowd.github.io/r_intro/)
+
 ### [Making maps of Ireland](https://brendanjodowd.github.io/map_guide/)
 
 ### [Making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
