@@ -371,12 +371,12 @@ pre code {
 
 
 <p>I had a situation where I had a dataset with a column for
-expenditure, and I wanted to calculate the sum of the expenditure for
-the seven most recent years for each year. I had thought about adding
-the value to <code>lag(value)</code> and <code>lag(value, 2)</code> and
-<code>lag(value, 3)</code> etc. all the way to
-<code>lag(value ,6)</code>, but I quickly realised that this would be
-messy.</p>
+expenditure, which had a row for each year. I needed to calculate the
+sum of the expenditure for the seven most recent years for each year. I
+had thought about adding the value to <code>lag(value)</code> and
+<code>lag(value, 2)</code> and <code>lag(value, 3)</code> etc. all the
+way to <code>lag(value ,6)</code>, but I quickly realised that this
+would be messy. I also didn’t want to write a for loop.</p>
 <p>Then I found out about the slider package, which includes the
 function <code>slide</code> and a bunch of related functions that give
 more specific output types, like <code>slide_dbl</code> for (double)
