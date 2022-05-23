@@ -12,7 +12,9 @@
 
 ### [Statistical Disclosure Control using sdcTable](https://brendanjodowd.github.io/sdc_guide/)
 
+## R snippets
 
+### [Renaming variables that may not exist](https://brendanjodowd.github.io/snippets/rename)
 
 ## Other bits
 
