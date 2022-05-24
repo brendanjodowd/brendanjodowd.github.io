@@ -11,7 +11,7 @@
 
 <meta name="author" content="Brendan O’Dowd" />
 
-<meta name="date" content="2022-05-23" />
+<meta name="date" content="2022-05-24" />
 
 <title>The slider package</title>
 
@@ -365,7 +365,7 @@ pre code {
 
 <h1 class="title toc-ignore">The slider package</h1>
 <h4 class="author">Brendan O’Dowd</h4>
-<h4 class="date">2022-05-23</h4>
+<h4 class="date">2022-05-24</h4>
 
 </div>
 
@@ -430,18 +430,20 @@ You can imagine how it would be useful with <code>max</code>,
 <p>It’s hard for me to think of an application for
 <code>slide_chr</code>, but let’s say you wanted to concatenate the two
 previous values of a string with the current value.</p>
-<pre class="r"><code>new_iris &lt;- iris %&gt;% 
-  mutate(species_3 = slide_chr(Species, ~paste(., collapse=&quot; &quot;), .before=2, .complete=T)) %&gt;% 
-  select(Species, species_3)
+<pre class="r"><code>starwars_names &lt;- starwars %&gt;% 
+  mutate(recent_names = slide_chr(name, ~paste(., collapse=&quot; &quot;), .before=2, .complete=T)) %&gt;% 
+  select(name, recent_names)
 
-head(new_iris)</code></pre>
-<pre><code>##   Species            species_3
-## 1  setosa                 &lt;NA&gt;
-## 2  setosa                 &lt;NA&gt;
-## 3  setosa setosa setosa setosa
-## 4  setosa setosa setosa setosa
-## 5  setosa setosa setosa setosa
-## 6  setosa setosa setosa setosa</code></pre>
+head(starwars_names)</code></pre>
+<pre><code>## # A tibble: 6 × 2
+##   name           recent_names                     
+##   &lt;chr&gt;          &lt;chr&gt;                            
+## 1 Luke Skywalker &lt;NA&gt;                             
+## 2 C-3PO          &lt;NA&gt;                             
+## 3 R2-D2          Luke Skywalker C-3PO R2-D2       
+## 4 Darth Vader    C-3PO R2-D2 Darth Vader          
+## 5 Leia Organa    R2-D2 Darth Vader Leia Organa    
+## 6 Owen Lars      Darth Vader Leia Organa Owen Lars</code></pre>
 
 
 
