@@ -377,15 +377,16 @@ had thought about adding the value to <code>lag(value)</code> and
 <code>lag(value, 2)</code> and <code>lag(value, 3)</code> etc. all the
 way to <code>lag(value ,6)</code>, but I quickly realised that this
 would be messy. I also didn’t want to write a for loop.</p>
-<p>Then I found out about the slider package, which includes the
-function <code>slide</code> and a bunch of related functions that give
-more specific output types, like <code>slide_dbl</code> for (double)
-numeric outputs and <code>slide_chr</code> for character type outputs.
-The slider functions can be applied to a whole range of things and a lot
-of the examples in the guide relate to vectors, but here I’m interested
-only in using the slider functions within <code>mutate</code> as applied
-to dataframes. The basic function <code>slide</code> returns a list, so
-I don’t think I would ever use that. I would probably only ever use
+<p>Then I found out about the <a href="https://cran.r-project.org/web/packages/slider/vignettes/slider.html">slider
+package</a>, which includes the function <code>slide</code> and a bunch
+of related functions that give more specific output types, like
+<code>slide_dbl</code> for (double) numeric outputs and
+<code>slide_chr</code> for character type outputs. The slider functions
+can be applied to a whole range of things and a lot of the examples in
+the guide relate to vectors, but here I’m interested only in using the
+slider functions within <code>mutate</code> as applied to dataframes.
+The basic function <code>slide</code> returns a list, so I don’t think I
+would ever use that. I would probably only ever use
 <code>slide_dbl</code> in practice, and can think of cases where
 <code>slide_chr</code> could be useful.</p>
 <p>The first argument to your <code>slide</code> function (we’ll use
