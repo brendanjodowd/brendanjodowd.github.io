@@ -14,9 +14,10 @@
 
 ## R snippets
 
-### [Renaming variables that may not exist](https://brendanjodowd.github.io/snippets/rename)
-### [Running and using shell in R](https://brendanjodowd.github.io/snippets/shell)
-### [Slider functions](https://brendanjodowd.github.io/snippets/slider)
+###<a href="https://brendanjodowd.github.io/snippets/rename" target="_blank">Renaming variables that may not exist</a>
+### <a href="https://brendanjodowd.github.io/snippets/shell" target="_blank">Running and using shell in R</a>
+### <a href="https://brendanjodowd.github.io/snippets/slider" target="_blank">Slider functions</a>
+
 
 ## Other bits
 
