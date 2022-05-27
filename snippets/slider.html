@@ -11,7 +11,7 @@
 
 <meta name="author" content="Brendan O’Dowd" />
 
-<meta name="date" content="2022-05-24" />
+<meta name="date" content="2022-05-27" />
 
 <title>The slider package</title>
 
@@ -365,49 +365,50 @@ pre code {
 
 <h1 class="title toc-ignore">The slider package</h1>
 <h4 class="author">Brendan O’Dowd</h4>
-<h4 class="date">2022-05-24</h4>
+<h4 class="date">2022-05-27</h4>
 
 </div>
 
 
-<p>I had a situation where I had a dataset with a column for
-expenditure, which had a row for each year. I needed to calculate the
-sum of the expenditure for the seven most recent years for each year. I
-had thought about adding the value to <code>lag(value)</code> and
+<p>I had a situation where I needed to calculate the sum of a value for
+the seven previous rows (including the current row). I thought about
+adding <code>value</code> to <code>lag(value)</code> and
 <code>lag(value, 2)</code> and <code>lag(value, 3)</code> etc. all the
-way to <code>lag(value ,6)</code>, but I quickly realised that this
-would be messy. I also didn’t want to write a for loop.</p>
+way to <code>lag(value ,6)</code>, but I realised that this would be
+messy. I also didn’t want to write a for loop.</p>
 <p>Then I found out about the <a href="https://cran.r-project.org/web/packages/slider/vignettes/slider.html">slider
-package</a>, which includes the function <code>slide</code> and a bunch
-of related functions that give more specific output types, like
-<code>slide_dbl</code> for (double) numeric outputs and
-<code>slide_chr</code> for character type outputs. The slider functions
-can be applied to a whole range of things and a lot of the examples in
-the guide relate to vectors, but here I’m interested only in using the
-slider functions within <code>mutate</code> as applied to dataframes.
-The basic function <code>slide</code> returns a list, so I don’t think I
-would ever use that. I would probably only ever use
-<code>slide_dbl</code> in practice, and can think of cases where
-<code>slide_chr</code> could be useful.</p>
+package</a>, which includes the function <code>slide</code> and related
+functions with specific output types. These functions allow you to
+specify a ‘window’ of rows before and/or after the current row, and to
+perform some operation on values within those rows. The window position
+is defined relative to each specific row so that the window ‘slides’
+down the dataframe. Here I’m only interested in applying slider
+functions to columns in dataframes, though they can be used on other
+structures. The primary <code>slide</code> function returns a list which
+I probably wouldn’t commonly use, but I have made use of
+<code>slide_dbl</code> which returns a (double) numeric value. There
+might also be cases where I would use <code>slide_chr</code> which
+returns string variables.</p>
 <p>The first argument to your <code>slide</code> function (we’ll use
-<code>slide_dbl</code> but this applies to the whole family of
-functions) is the column that you’re operating on, and the second
-argument is the function you want to apply. Then you define the window
-around each row that you want to include in your calculation using the
-arguments <code>.before</code> and <code>.after</code>. There are other
-arguments and options which were beyond my needs.</p>
+<code>slide_dbl</code> here) is the column that you’re operating on, and
+the second argument is the function you want to apply. Then you define
+the window around each row using the arguments <code>.before</code> and
+<code>.after</code>. There are other arguments and options which were
+beyond my needs.</p>
 <p>Let’s take a simple example using the starwars dataset that comes
 with the dplyr package. Let’s say we want to calculate a running sum of
 the three most recent values of <code>height</code> (inclusive of
-current row). I use <code>.before=2</code> to set the start of the
-window to two rows before the current row. The default value for
-<code>.after</code> is zero so I don’t need to adjust that. I’m also
-setting <code>.complete</code> to <code>TRUE</code>. This means that the
-window has to be complete to return a value, and I will get NA for the
-first two rows. If I had not made this adjustment (the default for
-<code>.complete</code> is <code>FALSE</code>), the value for the first
-and second rows would have included only one and two input values
-respectively.</p>
+current row). The first argument is <code>height</code>, and the second
+argument will be the function to apply which is <code>sum</code>. Then
+to define the window of rows to include I use <code>.before=2</code> to
+set the start of the window to two rows before the current row. The
+default value for <code>.after</code> is zero so I don’t need to adjust
+that. I’m also setting <code>.complete</code> to <code>TRUE</code>. This
+means that the window has to be complete to return a value, and I will
+get NA for the first two rows. If I had not made this adjustment (the
+default for <code>.complete</code> is <code>FALSE</code>), the value for
+the first and second rows would have included only one and two input
+values respectively.</p>
 <pre class="r"><code>library(tidyverse)
 library(slider)
 starwars_heights &lt;- starwars %&gt;% 
@@ -432,22 +433,29 @@ two most recent values for the same value of <code>sex</code> (it might
 look clearer if it was also sorted by <code>sex</code>).</p>
 <p>It’s hard for me to think of an application for
 <code>slide_chr</code>, but let’s say you wanted to concatenate the two
-previous values of a string with the current value. Let’s do that with
-<code>name</code> from the starwars dataset.</p>
+previous values of a string. Let’s do that with <code>name</code> from
+the starwars dataset. Note I’m setting <code>.after</code> to minus one;
+positive values of <code>.after</code> indicate <em>subsequent</em>
+rows, whereas I want to stop the window on the <em>previous</em>
+row.</p>
 <pre class="r"><code>starwars_names &lt;- starwars %&gt;% 
-  mutate(recent_names = slide_chr(name, ~paste(., collapse=&quot; &quot;), .before=2, .complete=T)) %&gt;% 
+  mutate(recent_names = slide_chr(name, 
+                                  ~paste(., collapse=&quot; &quot;), 
+                                  .before = 2, 
+                                  .after = -1,
+                                  .complete = T)) %&gt;% 
   select(name, recent_names)
 
 head(starwars_names)</code></pre>
 <pre><code>## # A tibble: 6 × 2
-##   name           recent_names                     
-##   &lt;chr&gt;          &lt;chr&gt;                            
-## 1 Luke Skywalker &lt;NA&gt;                             
-## 2 C-3PO          &lt;NA&gt;                             
-## 3 R2-D2          Luke Skywalker C-3PO R2-D2       
-## 4 Darth Vader    C-3PO R2-D2 Darth Vader          
-## 5 Leia Organa    R2-D2 Darth Vader Leia Organa    
-## 6 Owen Lars      Darth Vader Leia Organa Owen Lars</code></pre>
+##   name           recent_names           
+##   &lt;chr&gt;          &lt;chr&gt;                  
+## 1 Luke Skywalker &lt;NA&gt;                   
+## 2 C-3PO          &lt;NA&gt;                   
+## 3 R2-D2          Luke Skywalker C-3PO   
+## 4 Darth Vader    C-3PO R2-D2            
+## 5 Leia Organa    R2-D2 Darth Vader      
+## 6 Owen Lars      Darth Vader Leia Organa</code></pre>
 
 
 
