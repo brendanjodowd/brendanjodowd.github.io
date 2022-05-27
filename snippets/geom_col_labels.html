@@ -377,9 +377,9 @@ pre code {
 which show the value of that bar. We’ll use the Titanic dataset as an
 example. The Titanic dataset is not actually a dataframe but a different
 structure called a ‘table’, but we can easily convert it to a dataframe
-using <code>data.frame()</code>. Here we counting the number of people
-in each class who did and did not survive. We then make a column for
-each class, each with two rectangles, one for
+using <code>data.frame()</code>. Here we are counting the number of
+people in each class who did and did not survive. We then make a column
+for each class, each having two rectangles, one for
 <code>Survived == &quot;Yes&quot;</code> and one for
 <code>Survived == &quot;No&quot;</code>.</p>
 <p>To add the labels we use <code>geom_text()</code>, and the content of
@@ -408,8 +408,8 @@ that has your formatting and use that in the <code>label =</code> part,
 or
 </li>
 <li>
-wrap the numeric value in the formatting function directly in the
-<code>label =</code> part.
+wrap the numeric value in the formatting function you want directly in
+the <code>label =</code> part.
 </li>
 </ol>
 <p>Below I’ll show both examples. The output is the same so I’ll only
@@ -428,7 +428,6 @@ Titanic %&gt;% data.frame() %&gt;%
              y=pct , 
              fill=Survived , 
              label = pct_label)) + # &lt; key part
-  # the same again
   geom_col() +
   geom_text(position = position_stack(vjust = 0.5)) +
   scale_y_continuous(labels = percent)</code></pre>
@@ -501,11 +500,11 @@ item itself.</li>
 <li>Positive values of <code>nudge_x</code> and <code>nudge_y</code>
 move text right and up, while positive values of <code>hjust</code> and
 <code>vjust</code> move text left and down.</li>
-<li>A corollary from the previous point is that if you flip the
-coordinates using <code>+ coord_flip()</code> then the values of
-<code>nudge_x</code> and <code>nudge_y</code> would remain unchanged but
-you would need to reconfigure <code>hjust</code> and <code>vjust</code>
-since they relate to the plot area.</li>
+<li>If you flip the coordinates using <code>+ coord_flip()</code> then
+the values of <code>nudge_x</code> and <code>nudge_y</code> would remain
+unchanged but you would need to reconfigure <code>hjust</code> and
+<code>vjust</code> since they relate to the plot area and not the
+axes.</li>
 <li><code>hjust</code> and <code>vjust</code> can take values of
 <code>&quot;top&quot;</code>, <code>&quot;bottom&quot;</code>, <code>&quot;left&quot;</code>, and
 <code>&quot;right&quot;</code>. However for the purposes of positioning text
@@ -517,11 +516,11 @@ because there is zero offset; the text touches the column border.</li>
 top? In that case, we need to move the text outside the top of the bar
 <strong>and</strong> offset the text to the left and right so they are
 not sitting on top of each other. We can achieve the latter
-left-right-offset use <code>position = position_dodge()</code> within
-the <code>geom_text()</code> function. The <code>width</code> value of
-0.9 seems to work well for most charts of this type with a discrete
-x-axis. However, when it comes to moving the text outside the top of the
-bar we cannot use <code>nudge_y</code> in combination with
+left-right-offset by using <code>position = position_dodge()</code>
+within the <code>geom_text()</code> function. The <code>width</code>
+value of 0.9 seems to work well for most charts of this type with a
+discrete x-axis. However, when it comes to moving the text outside the
+top of the bar we cannot use <code>nudge_y</code> in combination with
 <code>position =</code> as mentioned above. Instead we have to use
 <code>vjust</code>. Note that I’ve had to adjust the y-axis limits using
 <code>ylim()</code> because the plot area doesn’t expand for text moved
