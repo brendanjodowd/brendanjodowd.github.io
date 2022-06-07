@@ -11,7 +11,7 @@
 
 <meta name="author" content="Brendan O’Dowd" />
 
-<meta name="date" content="2022-05-23" />
+<meta name="date" content="2022-06-03" />
 
 <title>Renaming variables that may not exist</title>
 
@@ -365,7 +365,7 @@ pre code {
 
 <h1 class="title toc-ignore">Renaming variables that may not exist</h1>
 <h4 class="author">Brendan O’Dowd</h4>
-<h4 class="date">2022-05-23</h4>
+<h4 class="date">2022-06-03</h4>
 
 </div>
 
@@ -375,19 +375,18 @@ handle incoming data, and can rename variables that may or may not
 exist. One way would be to write a bunch of
 <code>if(exists(&quot;variable&quot;, dataset)){ }</code> type structures, where
 the renaming happens in the curly brackets. A better way is to use the
-<code>rename()</code> function within the package plyr. It’s important
-to note that this function is masked by a function of the same name from
-the package dplyr when you load the tidyverse library, so you need to
-use the <code>plyr::</code> prefix if you are loading tidyverse or
-dplyr.</p>
-<p>Anyway, an example of how it works is shown below. The variable
+<code>rename()</code> function in combination with the
+<code>any_of()</code> selection helper function. The way it works is
+that the new-name and old-name pairs are passed as a vector to the
+<code>any_of</code> selection helper within <code>rename</code>. An
+example of how it works is shown below. The variable
 <code>Species</code> <strong>does</strong> exist and is renamed to
 <code>Type</code>. The variable <code>Scent</code> <strong>does
 not</strong> exist, and nothing is renamed to <code>Smell</code>.</p>
 <pre class="r"><code>library(tidyverse)
 
 new_dataset &lt;- iris %&gt;% 
-  plyr::rename(replace = c(Species = &quot;Type&quot;, Scent = &quot;Smell&quot;) , warn_missing = FALSE)
+  rename(any_of(c(&quot;Type&quot; = &quot;Species&quot;, &quot;Smell&quot; = &quot;Scent&quot;)) )
 
 head(new_dataset)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Type
