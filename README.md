@@ -2,7 +2,7 @@
 
 ## Some R guides 
 
-### [An introduction to R](https://brendanjodowd.github.io/r_intro/)
+### [An crash course in R](https://brendanjodowd.github.io/r_crash_course/)
 
 ### [Importing CSO data using the csodata package](https://brendanjodowd.github.io/cso_guide/)
 
