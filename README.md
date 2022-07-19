@@ -28,4 +28,4 @@
 
 ### <a href="https://brendanjodowd.github.io/assets/sas-r.pdf" target="_blank">SAS-R Cheatsheet</a>
 
-### <a href="https://brendanjodowd.github.io/nace_page.html" target="_blank">List of NACE codes</a>
+### <a href="https://htmlpreview.github.io/?https://github.com/brendanjodowd/nace_page/blob/main/nace_page.html" target="_blank">List of NACE codes</a>
