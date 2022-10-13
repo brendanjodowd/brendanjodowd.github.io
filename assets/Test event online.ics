@@ -1,0 +1,127 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:GMT Standard Time
+BEGIN:STANDARD
+DTSTART:16011028T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZOFFSETFROM:+0100
+TZOFFSETTO:-0000
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010325T010000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZOFFSETFROM:-0000
+TZOFFSETTO:+0100
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN="Brendan O'Dowd";RSVP=TRUE:mailto:Brendan.ODowd@enterprise.gov.
+	ie
+CLASS:PUBLIC
+CREATED:20221013T075951Z
+DESCRIPTION:  \n...........................................................
+	..........................................................................
+	....\n\nJoin Teams Meeting \nen-US \nhttps://teams.microsoft.com/l/meetup-
+	join/19%3ameeting_M2U5YTdkN2UtMTZiZi00ZGEwLTk5YjktZTU5NTVmNGE4MTg2%40threa
+	d.v2/0?context=%7b%22Tid%22%3a%22fa5bdc6b-394c-4572-bcd0-b99db2190b23%22%2
+	c%22Oid%22%3a%22ebd43e46-728b-469b-87ae-16c96b34f601%22%7d\n\nMeeting ID: 
+	372 257 605 492 \nPasscode: MGj8CW \n\nIf you need a local number\, get on
+	e here. And if you've forgotten the dial-in PIN\, you can reset it. \nToll
+	 number: +353 1 566 1947 \nConference ID: \n225 743 738# \nLocal Number : 
+	https://dialin.teams.microsoft.com/c69cc1e8-3059-4788-88c2-ebd88c9cf1c7?id
+	=225743738 Reset Pin : https://dialin.teams.microsoft.com/usp/pstnconferen
+	cing\n\nPlease note that Microsoft Teams meetings facilitated by the Depar
+	tment or its offices may use closed captioning\, powered by Microsoft’s 
+	cloud services\, to assist attendees with hearing difficulties. See the 
+	“Legal” link below for further information. Footer\n\nLearn More https
+	://aka.ms/JoinTeamsMeeting |  | Meeting options: https://teams.microsoft.c
+	om/meetingOptions/?organizerId=ebd43e46-728b-469b-87ae-16c96b34f601&tenant
+	Id=fa5bdc6b-394c-4572-bcd0-b99db2190b23&threadId=19_meeting_M2U5YTdkN2UtMT
+	ZiZi00ZGEwLTk5YjktZTU5NTVmNGE4MTg2@thread.v2&messageId=0&language=en-US | 
+	| Legal https://enterprise.gov.ie/en/Who-We-Are/Corporate-Information/Data
+	-Protection/Microsoft-Teams-Live-Captioning.html\n\n......................
+	..........................................................................
+	.........................................\n\n
+DTEND;TZID="GMT Standard Time":20221015T123000
+DTSTAMP:20221013T075615Z
+DTSTART;TZID="GMT Standard Time":20221015T120000
+LAST-MODIFIED:20221013T075951Z
+LOCATION:Microsoft Teams Meeting
+ORGANIZER;CN="Brendan O'Dowd":mailto:Brendan.ODowd@enterprise.gov.ie
+PRIORITY:5
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-ie:Test event: online
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E0080000000060298B96E1DED801000000000000000
+	0100000005CFC5E404943744BB9ED1384764586B2
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta name=Generato
+	r content="Microsoft Word 15 (filtered medium)"><style><!--\n/* Font Defin
+	itions */\n@font-face\n	{font-family:"Cambria Math"\;\n	panose-1:2 4 5 3 5
+	 4 6 3 2 4\;}\n@font-face\n	{font-family:Calibri\;\n	panose-1:2 15 5 2 2 2
+	 4 3 2 4\;}\n/* Style Definitions */\na:link\, span.MsoHyperlink\n	{mso-st
+	yle-priority:99\;\n	color:blue\;\n	text-decoration:underline\;}\nspan.Emai
+	lStyle19\n	{mso-style-type:personal-compose\;}\n.MsoChpDefault\n	{mso-styl
+	e-type:export-only\;\n	font-size:10.0pt\;}\n@page WordSection1\n	{size:612
+	.0pt 792.0pt\;\n	margin:72.0pt 72.0pt 72.0pt 72.0pt\;}\ndiv.WordSection1\n
+		{page:WordSection1\;}\n--></style><!--[if gte mso 9]><xml>\n<o:shapedefau
+	lts v:ext="edit" spidmax="1026" />\n</xml><![endif]--><!--[if gte mso 9]><
+	xml>\n<o:shapelayout v:ext="edit">\n<o:idmap v:ext="edit" data="1" />\n</o
+	:shapelayout></xml><![endif]--></head><body lang=EN-IE link=blue vlink=pur
+	ple style='word-wrap:break-word'><div class=WordSection1><p>&nbsp\; <br>..
+	..........................................................................
+	.............................................................<o:p></o:p></
+	p><p>Join Teams Meeting <br>en-US <br><a href="https://teams.microsoft.com
+	/l/meetup-join/19%3ameeting_M2U5YTdkN2UtMTZiZi00ZGEwLTk5YjktZTU5NTVmNGE4MT
+	g2%40thread.v2/0?context=%7b%22Tid%22%3a%22fa5bdc6b-394c-4572-bcd0-b99db21
+	90b23%22%2c%22Oid%22%3a%22ebd43e46-728b-469b-87ae-16c96b34f601%22%7d">http
+	s://teams.microsoft.com/l/meetup-join/19%3ameeting_M2U5YTdkN2UtMTZiZi00ZGE
+	wLTk5YjktZTU5NTVmNGE4MTg2%40thread.v2/0?context=%7b%22Tid%22%3a%22fa5bdc6b
+	-394c-4572-bcd0-b99db2190b23%22%2c%22Oid%22%3a%22ebd43e46-728b-469b-87ae-1
+	6c96b34f601%22%7d</a><o:p></o:p></p><p>Meeting ID: 372 257 605 492 <br>Pas
+	scode: MGj8CW <o:p></o:p></p><p>If you need a local number\, get one here.
+	 And if you've forgotten the dial-in PIN\, you can reset it. <br>Toll numb
+	er: +353 1 566 1947 <br>Conference ID: <br>225 743 738# <br>Local Number :
+	 <a href="https://dialin.teams.microsoft.com/c69cc1e8-3059-4788-88c2-ebd88
+	c9cf1c7?id=225743738">https://dialin.teams.microsoft.com/c69cc1e8-3059-478
+	8-88c2-ebd88c9cf1c7?id=225743738</a> Reset Pin : <a href="https://dialin.t
+	eams.microsoft.com/usp/pstnconferencing">https://dialin.teams.microsoft.co
+	m/usp/pstnconferencing</a><o:p></o:p></p><p>Please note that Microsoft Tea
+	ms meetings facilitated by the Department or its offices may use closed ca
+	ptioning\, powered by Microsoft&#8217\;s cloud services\, to assist attend
+	ees with hearing difficulties. See the &#8220\;Legal&#8221\; link below fo
+	r further information. Footer<o:p></o:p></p><p>Learn More <a href="https:/
+	/aka.ms/JoinTeamsMeeting">https://aka.ms/JoinTeamsMeeting</a> |&nbsp\; | M
+	eeting options: <a href="https://teams.microsoft.com/meetingOptions/?organ
+	izerId=ebd43e46-728b-469b-87ae-16c96b34f601&amp\;tenantId=fa5bdc6b-394c-45
+	72-bcd0-b99db2190b23&amp\;threadId=19_meeting_M2U5YTdkN2UtMTZiZi00ZGEwLTk5
+	YjktZTU5NTVmNGE4MTg2@thread.v2&amp\;messageId=0&amp\;language=en-US">https
+	://teams.microsoft.com/meetingOptions/?organizerId=ebd43e46-728b-469b-87ae
+	-16c96b34f601&amp\;tenantId=fa5bdc6b-394c-4572-bcd0-b99db2190b23&amp\;thre
+	adId=19_meeting_M2U5YTdkN2UtMTZiZi00ZGEwLTk5YjktZTU5NTVmNGE4MTg2@thread.v2
+	&amp\;messageId=0&amp\;language=en-US</a> | | Legal <a href="https://enter
+	prise.gov.ie/en/Who-We-Are/Corporate-Information/Data-Protection/Microsoft
+	-Teams-Live-Captioning.html">https://enterprise.gov.ie/en/Who-We-Are/Corpo
+	rate-Information/Data-Protection/Microsoft-Teams-Live-Captioning.html</a><
+	o:p></o:p></p><p>.........................................................
+	..........................................................................
+	......<o:p></o:p></p></div></body></html>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTSEQTIME:20221013T075615Z
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MS-OLK-CONFTYPE:0
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
