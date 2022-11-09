@@ -18,6 +18,7 @@
 ### <a href="https://brendanjodowd.github.io/snippets/date_time_formats" target="_blank">Formatting date and time</a>
 ### <a href="https://brendanjodowd.github.io/snippets/shell" target="_blank">Running and using shell in R</a>
 ### <a href="https://brendanjodowd.github.io/snippets/slider" target="_blank">Slider functions</a>
+### <a href="https://brendanjodowd.github.io/snippets/long_code" target="_blank">Showing progress of R loops</a>
 ### <a href="https://brendanjodowd.github.io/snippets/geom_col_labels" target="_blank">Labels on `geom_col` (and `geom_bar`)</a>
 ### <a href="https://brendanjodowd.github.io/snippets/geom_col" target="_blank">Why you should use `geom_col`</a>
 
