@@ -10,7 +10,7 @@
 
 ### [Making interactive maps of Ireland](https://brendanjodowd.github.io/interactive_maps/)
 
-### [Using OpenStreetMap data in R](https://brendanjodowd.github.io/snippets/tipp_bogs_wind)
+### [Using OpenStreetMap data in R](https://brendanjodowd.github.io/snippets/osm_r)
 
 ### [Statistical Disclosure Control using sdcTable](https://brendanjodowd.github.io/sdc_guide/)
 
