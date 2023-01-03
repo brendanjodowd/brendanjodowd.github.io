@@ -63695,7 +63695,7 @@ new dataframe called <code>bogs</code>. Then I select a few variables
 which are of interest.</p>
 <pre class="r"><code>bogs &lt;- bind_rows(bogs_query$osm_polygons  ,
                  bogs_query$osm_multipolygons) %&gt;% 
-  select(osm_id, name , wetland)</code></pre>
+  select( name , wetland)</code></pre>
 <!-- An optional extra step here is to pass the `bogs` sf object through the function `ms_simplify` from the rmapshaper package. This simplifies polygons, reducing their size. There are parameters to that function to tailor the process, but I find that the default settings are usually fine.  -->
 <!-- ```{r bogs_simplify , eval=F} -->
 <!-- bogs <- rmapshaper::ms_simplify(bogs) -->
@@ -63712,9 +63712,6 @@ which are of interest.</p>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 </th>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-osm_id
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 name
 </th>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
@@ -63728,9 +63725,6 @@ wetland
 4555034
 </td>
 <td style="text-align:left;">
-4555034
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -63738,9 +63732,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-4555102
-</td>
 <td style="text-align:left;">
 4555102
 </td>
@@ -63756,9 +63747,6 @@ tidalflat
 4556142
 </td>
 <td style="text-align:left;">
-4556142
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -63770,9 +63758,6 @@ NA
 4561722
 </td>
 <td style="text-align:left;">
-4561722
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -63780,9 +63765,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-5404872
-</td>
 <td style="text-align:left;">
 5404872
 </td>
@@ -63794,9 +63776,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-6957911
-</td>
 <td style="text-align:left;">
 6957911
 </td>
@@ -63812,9 +63791,6 @@ NA
 23615523
 </td>
 <td style="text-align:left;">
-23615523
-</td>
-<td style="text-align:left;">
 Bun Lough
 </td>
 <td style="text-align:left;">
@@ -63822,9 +63798,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23615524
-</td>
 <td style="text-align:left;">
 23615524
 </td>
@@ -63840,9 +63813,6 @@ NA
 23615526
 </td>
 <td style="text-align:left;">
-23615526
-</td>
-<td style="text-align:left;">
 Commons Lough
 </td>
 <td style="text-align:left;">
@@ -63850,9 +63820,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23615527
-</td>
 <td style="text-align:left;">
 23615527
 </td>
@@ -63868,9 +63835,6 @@ NA
 23615572
 </td>
 <td style="text-align:left;">
-23615572
-</td>
-<td style="text-align:left;">
 Shancorry Lough
 </td>
 <td style="text-align:left;">
@@ -63878,9 +63842,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23615595
-</td>
 <td style="text-align:left;">
 23615595
 </td>
@@ -63896,9 +63857,6 @@ NA
 23615596
 </td>
 <td style="text-align:left;">
-23615596
-</td>
-<td style="text-align:left;">
 Edenterriff Lough
 </td>
 <td style="text-align:left;">
@@ -63906,9 +63864,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23615600
-</td>
 <td style="text-align:left;">
 23615600
 </td>
@@ -63924,9 +63879,6 @@ NA
 23615719
 </td>
 <td style="text-align:left;">
-23615719
-</td>
-<td style="text-align:left;">
 Lough Amoneen
 </td>
 <td style="text-align:left;">
@@ -63938,9 +63890,6 @@ NA
 23618883
 </td>
 <td style="text-align:left;">
-23618883
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -63948,9 +63897,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23619293
-</td>
 <td style="text-align:left;">
 23619293
 </td>
@@ -63966,9 +63912,6 @@ NA
 23619294
 </td>
 <td style="text-align:left;">
-23619294
-</td>
-<td style="text-align:left;">
 Peartree Lough
 </td>
 <td style="text-align:left;">
@@ -63976,9 +63919,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23619342
-</td>
 <td style="text-align:left;">
 23619342
 </td>
@@ -63994,9 +63934,6 @@ NA
 23619485
 </td>
 <td style="text-align:left;">
-23619485
-</td>
-<td style="text-align:left;">
 Corfad Lough
 </td>
 <td style="text-align:left;">
@@ -64004,9 +63941,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-23740903
-</td>
 <td style="text-align:left;">
 23740903
 </td>
@@ -64022,9 +63956,6 @@ NA
 23858970
 </td>
 <td style="text-align:left;">
-23858970
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64036,9 +63967,6 @@ wet_meadow
 25569869
 </td>
 <td style="text-align:left;">
-25569869
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64050,9 +63978,6 @@ NA
 31025273
 </td>
 <td style="text-align:left;">
-31025273
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64060,9 +63985,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-31025469
-</td>
 <td style="text-align:left;">
 31025469
 </td>
@@ -64078,9 +64000,6 @@ NA
 31119401
 </td>
 <td style="text-align:left;">
-31119401
-</td>
-<td style="text-align:left;">
 Cortial Lough
 </td>
 <td style="text-align:left;">
@@ -64092,9 +64011,6 @@ NA
 31119986
 </td>
 <td style="text-align:left;">
-31119986
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64102,9 +64018,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-31120056
-</td>
 <td style="text-align:left;">
 31120056
 </td>
@@ -64120,9 +64033,6 @@ NA
 31120058
 </td>
 <td style="text-align:left;">
-31120058
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64130,9 +64040,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-31558458
-</td>
 <td style="text-align:left;">
 31558458
 </td>
@@ -64148,9 +64055,6 @@ NA
 33371608
 </td>
 <td style="text-align:left;">
-33371608
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64158,9 +64062,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-34234479
-</td>
 <td style="text-align:left;">
 34234479
 </td>
@@ -64176,9 +64077,6 @@ NA
 34289566
 </td>
 <td style="text-align:left;">
-34289566
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64186,9 +64084,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-35220858
-</td>
 <td style="text-align:left;">
 35220858
 </td>
@@ -64200,9 +64095,6 @@ marsh
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-35356642
-</td>
 <td style="text-align:left;">
 35356642
 </td>
@@ -64218,9 +64110,6 @@ marsh
 38443998
 </td>
 <td style="text-align:left;">
-38443998
-</td>
-<td style="text-align:left;">
 Harbour Lagoon
 </td>
 <td style="text-align:left;">
@@ -64232,9 +64121,6 @@ NA
 39215815
 </td>
 <td style="text-align:left;">
-39215815
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64242,9 +64128,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-39334082
-</td>
 <td style="text-align:left;">
 39334082
 </td>
@@ -64260,9 +64143,6 @@ bog
 39351602
 </td>
 <td style="text-align:left;">
-39351602
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64270,9 +64150,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-40520959
-</td>
 <td style="text-align:left;">
 40520959
 </td>
@@ -64288,9 +64165,6 @@ NA
 40521686
 </td>
 <td style="text-align:left;">
-40521686
-</td>
-<td style="text-align:left;">
 Dog Island
 </td>
 <td style="text-align:left;">
@@ -64302,9 +64176,6 @@ NA
 40678311
 </td>
 <td style="text-align:left;">
-40678311
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64312,9 +64183,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-40678312
-</td>
 <td style="text-align:left;">
 40678312
 </td>
@@ -64330,9 +64198,6 @@ bog
 40678313
 </td>
 <td style="text-align:left;">
-40678313
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64344,9 +64209,6 @@ bog
 40678798
 </td>
 <td style="text-align:left;">
-40678798
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64358,9 +64220,6 @@ NA
 40678799
 </td>
 <td style="text-align:left;">
-40678799
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64368,9 +64227,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-40717447
-</td>
 <td style="text-align:left;">
 40717447
 </td>
@@ -64386,9 +64242,6 @@ wet_meadow
 40717455
 </td>
 <td style="text-align:left;">
-40717455
-</td>
-<td style="text-align:left;">
 Crohery Lough
 </td>
 <td style="text-align:left;">
@@ -64396,9 +64249,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-40717563
-</td>
 <td style="text-align:left;">
 40717563
 </td>
@@ -64414,9 +64264,6 @@ wet_meadow
 40991992
 </td>
 <td style="text-align:left;">
-40991992
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64428,9 +64275,6 @@ reedbed
 42325517
 </td>
 <td style="text-align:left;">
-42325517
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64438,9 +64282,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-42325588
-</td>
 <td style="text-align:left;">
 42325588
 </td>
@@ -64456,9 +64297,6 @@ bog
 42326006
 </td>
 <td style="text-align:left;">
-42326006
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64466,9 +64304,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-42326018
-</td>
 <td style="text-align:left;">
 42326018
 </td>
@@ -64484,9 +64319,6 @@ bog
 42326623
 </td>
 <td style="text-align:left;">
-42326623
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64494,9 +64326,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-43946225
-</td>
 <td style="text-align:left;">
 43946225
 </td>
@@ -64512,9 +64341,6 @@ saltmarsh
 44173637
 </td>
 <td style="text-align:left;">
-44173637
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64522,9 +64348,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-46354423
-</td>
 <td style="text-align:left;">
 46354423
 </td>
@@ -64540,9 +64363,6 @@ NA
 46605651
 </td>
 <td style="text-align:left;">
-46605651
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64550,9 +64370,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-46930084
-</td>
 <td style="text-align:left;">
 46930084
 </td>
@@ -64568,9 +64385,6 @@ NA
 50795629
 </td>
 <td style="text-align:left;">
-50795629
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64578,9 +64392,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-50795657
-</td>
 <td style="text-align:left;">
 50795657
 </td>
@@ -64596,9 +64407,6 @@ tidalflat
 50795685
 </td>
 <td style="text-align:left;">
-50795685
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64606,9 +64414,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-50795726
-</td>
 <td style="text-align:left;">
 50795726
 </td>
@@ -64624,9 +64429,6 @@ tidalflat
 50795739
 </td>
 <td style="text-align:left;">
-50795739
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64634,9 +64436,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-51877248
-</td>
 <td style="text-align:left;">
 51877248
 </td>
@@ -64652,9 +64451,6 @@ tidalflat
 51877250
 </td>
 <td style="text-align:left;">
-51877250
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64666,9 +64462,6 @@ tidalflat
 52489003
 </td>
 <td style="text-align:left;">
-52489003
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64680,9 +64473,6 @@ NA
 56348290
 </td>
 <td style="text-align:left;">
-56348290
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64690,9 +64480,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-61478034
-</td>
 <td style="text-align:left;">
 61478034
 </td>
@@ -64708,9 +64495,6 @@ marsh
 61842936
 </td>
 <td style="text-align:left;">
-61842936
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64718,9 +64502,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-62333068
-</td>
 <td style="text-align:left;">
 62333068
 </td>
@@ -64736,9 +64517,6 @@ bog
 62333069
 </td>
 <td style="text-align:left;">
-62333069
-</td>
-<td style="text-align:left;">
 Cashel Bog
 </td>
 <td style="text-align:left;">
@@ -64750,9 +64528,6 @@ bog
 62720230
 </td>
 <td style="text-align:left;">
-62720230
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64760,9 +64535,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-63514885
-</td>
 <td style="text-align:left;">
 63514885
 </td>
@@ -64778,9 +64550,6 @@ tidalflat
 63514886
 </td>
 <td style="text-align:left;">
-63514886
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64788,9 +64557,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-63514891
-</td>
 <td style="text-align:left;">
 63514891
 </td>
@@ -64806,9 +64572,6 @@ tidalflat
 63514894
 </td>
 <td style="text-align:left;">
-63514894
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64816,9 +64579,6 @@ tidalflat
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-63514896
-</td>
 <td style="text-align:left;">
 63514896
 </td>
@@ -64834,9 +64594,6 @@ tidalflat
 63830190
 </td>
 <td style="text-align:left;">
-63830190
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64844,9 +64601,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-64714874
-</td>
 <td style="text-align:left;">
 64714874
 </td>
@@ -64862,9 +64616,6 @@ bog
 65644330
 </td>
 <td style="text-align:left;">
-65644330
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64872,9 +64623,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-65644351
-</td>
 <td style="text-align:left;">
 65644351
 </td>
@@ -64890,9 +64638,6 @@ NA
 65644401
 </td>
 <td style="text-align:left;">
-65644401
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64900,9 +64645,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-65696444
-</td>
 <td style="text-align:left;">
 65696444
 </td>
@@ -64918,9 +64660,6 @@ fen
 66156046
 </td>
 <td style="text-align:left;">
-66156046
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64928,9 +64667,6 @@ marsh
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-67435156
-</td>
 <td style="text-align:left;">
 67435156
 </td>
@@ -64946,9 +64682,6 @@ bog
 67719402
 </td>
 <td style="text-align:left;">
-67719402
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64956,9 +64689,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-67729726
-</td>
 <td style="text-align:left;">
 67729726
 </td>
@@ -64974,9 +64704,6 @@ bog
 67729728
 </td>
 <td style="text-align:left;">
-67729728
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64988,9 +64715,6 @@ bog
 69600919
 </td>
 <td style="text-align:left;">
-69600919
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -64998,9 +64722,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-69600924
-</td>
 <td style="text-align:left;">
 69600924
 </td>
@@ -65016,9 +64737,6 @@ NA
 71461300
 </td>
 <td style="text-align:left;">
-71461300
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -65026,9 +64744,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-72668393
-</td>
 <td style="text-align:left;">
 72668393
 </td>
@@ -65044,9 +64759,6 @@ bog
 75592041
 </td>
 <td style="text-align:left;">
-75592041
-</td>
-<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
@@ -65054,9 +64766,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-75768084
-</td>
 <td style="text-align:left;">
 75768084
 </td>
@@ -65072,9 +64781,6 @@ NA
 75809610
 </td>
 <td style="text-align:left;">
-75809610
-</td>
-<td style="text-align:left;">
 White Lough
 </td>
 <td style="text-align:left;">
@@ -65082,9 +64788,6 @@ NA
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-79286614
-</td>
 <td style="text-align:left;">
 79286614
 </td>
@@ -65100,9 +64803,6 @@ bog
 82222382
 </td>
 <td style="text-align:left;">
-82222382
-</td>
-<td style="text-align:left;">
 Ballyteague Bog
 </td>
 <td style="text-align:left;">
@@ -65110,9 +64810,6 @@ bog
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-82227098
-</td>
 <td style="text-align:left;">
 82227098
 </td>
