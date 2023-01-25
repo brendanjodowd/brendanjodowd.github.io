@@ -16,7 +16,7 @@
 
 ## R snippets
 
-### <a href="https://brendanjodowd.github.io/snippets/rename" target="_blank">Renaming variables that may not exist</a>
+### <a href="https://brendanjodowd.github.io/snippets/variables_may_not_exist" target="_blank">Managing variables that may not exist</a>
 ### <a href="https://brendanjodowd.github.io/snippets/date_time_formats" target="_blank">Formatting date and time</a>
 ### <a href="https://brendanjodowd.github.io/snippets/shell" target="_blank">Running and using shell in R</a>
 ### <a href="https://brendanjodowd.github.io/snippets/slider" target="_blank">Slider functions</a>
