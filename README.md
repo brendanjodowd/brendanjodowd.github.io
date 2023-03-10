@@ -36,3 +36,6 @@
 ### <a href="https://htmlpreview.github.io/?https://github.com/brendanjodowd/nace_page/blob/main/nace_page.html" target="_blank">List of NACE codes</a>
 
 ### <a href="https://brendanjodowd.github.io/snippets/eircode_map" target="_blank">Eircode Routing Key Map</a>
+
+### <a href="https://github.com/brendanjodowd/SAS" target="_blank">Lots of useful macros for SAS</a>
+
