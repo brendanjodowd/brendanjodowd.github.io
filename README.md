@@ -43,3 +43,9 @@
 
 ### <a href="https://github.com/brendanjodowd/SAS" target="_blank">Lots of useful macros for SAS</a>
 
+### <a href="https://brendanjodowd.shinyapps.io/Brownie/" target="_blank">The Axis of Fudge</a> - an interactive brownie recipe exploration tool in Shiny
+
+### <a href="https://brendanjodowd.shinyapps.io/pop_map" target="_blank">LEA Population Map</a> - a Shiny web app for calculating population in selected LEAs
+
+ 
+
