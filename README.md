@@ -33,6 +33,8 @@
 
 ### <a href="https://brendanjodowd.github.io/consmap1" target="_blank">Constituency Tilegram with changes recommended by Electoral Commission (2023)</a>
 
+### <a href="https://brendanjodowd.github.io/leaders" target="_blank">Leaders' tenures of Irish political parties</a>
+
 ### <a href="https://brendanjodowd.github.io/assets/sas-r.pdf" target="_blank">SAS-R Cheatsheet</a>
 
 ### <a href="https://brendanjodowd.github.io/snippets/hub_map" target="_blank">Hex Map of Research Resources</a>
