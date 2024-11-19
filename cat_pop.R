@@ -52,7 +52,9 @@ cat_pop <- pop_2 %>%
   # Adding a blank row for the ten person emojis at the top.
   add_row(geo = '', cpp = 13) %>% 
   # Adding the UK data
-  add_row(geo='UK', cat = 9244254, pop =  68265209, cpp = cat/pop) %>% 
+  # Adding in *10 here, with thanks to Dan Ridley-Ellis for spotting that it was missing
+  # in the first version.
+  add_row(geo='UK', cat = 9244254, pop =  68265209, cpp = cat*10/pop) %>% 
   arrange(-cpp) %>% 
   mutate(geo = case_when(
     str_detect(geo, 'European') ~ 'EU 27',
