@@ -27,7 +27,9 @@
 
 ## Other bits
 
-### <a href="https://brendanjodowd.github.io/cons_map" target="_blank">Constituency Tilegram with TDs</a>
+### <a href="https://brendanjodowd.github.io/tds24" target="_blank">Constituency Tilegram with TDs</a>
+
+### <a href="https://brendanjodowd.github.io/cons_map" target="_blank">Constituency Tilegram with TDs (2020 GE)</a>
 
 ### <a href="https://brendanjodowd.github.io/retiring_tds" target="_blank">Constituency Tilegram highlighting TDS that will not be contesting next general election</a>
 
